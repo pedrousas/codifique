@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="codifique.css">
+    <title>Codifique</title>
+</head>
+
+<body>
+
+    <video src="video (2).mp4" muted loop autoplay></video>
+    <section>
+
+        <h1 class="vertical">Codifique</h1>
+        <h1>Decodifique</h1>
+
+
+
+        <div class="codificadoresinp">
+            <div class="escolhaCod">
+                <label for="codificadores">Escolha um codificador:</label>
+                <select name="codificadores" id="codificadores" onchange="recebeDisplay()">
+    
+    <optgroup label="codificadores:">
+    <option value="nulo"></option>
+    <option value="base64">Base64</option>
+    <option value="codigo de césar">Código de César</option>
+    </select>
+            </div>
+            <br>
+            <div class="radioinp">
+                <form id="escolhaC">
+                    <input type="radio" id="codificar" name="codigo" value="codificar" onchange="botao()">
+                    <label for="codificar">Codificar</label><br>
+                    <input type="radio" id="decodificar" name="codigo" value="decodificar" onchange="botaoDesc()">
+                    <label for="decodificar">Decodificar</label><br>
+                    <div class="incremento2">
+                        <label for="increment">Valor de Incremento:</label>
+                        <input type="text" id="increment" onchange="validaIncremento()">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="texto">
+            <div class="text">
+                <label for='receber'>Digite sua mensagem: </label><br>
+                <textarea name="receber" id="receber" cols="30" rows="10"></textarea>
+                <textarea name="receberC" id="receberC" cols="30" rows="10"></textarea>
+            </div>
+
+
+
+            <div class="paragrafos">
+                <div>
+                    <p>Mensagem Processada:</p>
+                </div>
+                <div class="p">
+                    <p id='entregar'></p>
+                    <p id='entregarC'></p>
+                </div>
+
+            </div>
+
+        </div>
+        <button class="botao" type="submit" onclick="decisao()"><p class="bparagrafo">Processar</p></button>
+    </section>
+
+</body>
+<script src="base64.js"></script>
+<script src="cifra.js"></script>
+
+</html>
